@@ -16,6 +16,7 @@ RUN git clone https://github.com/Kong/kong.git && \
     cd .. && \
     rm -rf kong
 
+# Add modified "busted" + "helpers.lua" + "docker-entrypoint.sh"
 ADD ./root /
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
