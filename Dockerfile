@@ -18,4 +18,5 @@ RUN git clone https://github.com/Kong/kong.git && \
 
 ADD ./root /
 
-ENTRYPOINT [ "/docker-entrypoint.sh", "sh" ]
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
+CMD [ "sh" ]

@@ -5,7 +5,3 @@ services:
     image: kong-builder:1.2-centos
     build:
       context: .
-    environment:
-    - KONG_DATABASE=off
-    volumes:
-    - ../kong-plugin-device-detection:/src
