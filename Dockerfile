@@ -18,6 +18,7 @@ RUN git clone https://github.com/Kong/kong.git && \
 
 # Add modified "busted" + "helpers.lua" + "docker-entrypoint.sh"
 ADD ./root /
+RUN chmod a+x /docker-entrypoint.sh /usr/local/bin/busted
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD [ "sh" ]
