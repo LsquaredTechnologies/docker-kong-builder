@@ -1,0 +1,13 @@
+sudo: required
+language: python
+services:
+- docker
+
+before_script:
+- chmod a+x ./build.sh ./deploy.sh
+
+script:
+- ./build.sh
+
+after_success:
+- ./deploy.sh

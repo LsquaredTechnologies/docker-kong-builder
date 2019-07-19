@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose build
+docker build -t lsquared/kong-builder:1.2-centos .
