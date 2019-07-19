@@ -17,3 +17,6 @@ indent_size              = 4
 [*.{yaml,yml}]
 indent_style             = space
 indent_size              = 2
+
+[*.ps1]
+end_of_line              = crlf
