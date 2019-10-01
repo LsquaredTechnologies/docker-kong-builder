@@ -1,4 +1,4 @@
-FROM kong:1.2-centos
+FROM kong:1.3.0-centos
 
 # Installing "Development tools" is long... Keep it first!
 RUN yum groupinstall "Development tools" -y && \
@@ -7,7 +7,10 @@ RUN yum groupinstall "Development tools" -y && \
     rm -rf /var/cache/
 
 RUN luarocks install busted && \
-    luarocks install luacheck
+    luarocks install luacheck && \
+    luarocks install lua-resty-jwt && \
+    luarocks install lua-resty-openidc && \
+    luarocks install kong-oidc
 
 RUN git clone https://github.com/Kong/kong.git && \
     cd kong && \
