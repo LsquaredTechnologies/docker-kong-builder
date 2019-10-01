@@ -3,7 +3,7 @@ FROM kong:1.3.0-centos
 # Installing "Development tools" is long... Keep it first!
 RUN yum groupinstall "Development tools" -y && \
     # Remove this line when image is OK!
-    # yum install which -y && \
+    yum install which -y && \
     rm -rf /var/cache/
 
 RUN luarocks install busted && \
