@@ -2,6 +2,6 @@ version: '3.7'
 
 services:
   kong-builder:
-    image: lsquared/kong-builder:1.2-centos
+    image: eliauren/kong-builder:1.2-centos
     build:
       context: .
